@@ -15,10 +15,24 @@ version = "3.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0261eeb244071203cd9727151a3161b9f6b443001c265dd52e782db6a36aa4d0"
 dependencies = [
- "amq-protocol-codegen",
- "amq-protocol-tcp",
- "amq-protocol-types",
- "amq-protocol-uri",
+ "amq-protocol-codegen 3.1.0",
+ "amq-protocol-tcp 3.1.0",
+ "amq-protocol-types 3.1.0",
+ "amq-protocol-uri 3.1.0",
+ "cookie-factory",
+ "nom 5.1.0",
+]
+
+[[package]]
+name = "amq-protocol"
+version = "5.0.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "714cdf2ffdcc82cf2e20494ad63c5c79bdf936c7ebd80df9571e1b8464c8c67a"
+dependencies = [
+ "amq-protocol-codegen 5.0.1",
+ "amq-protocol-tcp 5.0.1",
+ "amq-protocol-types 5.0.1",
+ "amq-protocol-uri 5.0.1",
  "cookie-factory",
  "nom 5.1.0",
 ]
@@ -29,8 +43,20 @@ version = "3.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "804fc12efd85663a6ced824386dde4f9b255fc00dd3db96459e35165164828e5"
 dependencies = [
- "amq-protocol-types",
- "handlebars",
+ "amq-protocol-types 3.1.0",
+ "handlebars 2.0.4",
+ "serde",
+ "serde_json",
+]
+
+[[package]]
+name = "amq-protocol-codegen"
+version = "5.0.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "96186ecd4da3b2f2fc33bca218f1f098b3d493e080c6925ff628e87150a97695"
+dependencies = [
+ "amq-protocol-types 5.0.1",
+ "handlebars 3.0.1",
  "serde",
  "serde_json",
 ]
@@ -41,9 +67,21 @@ version = "3.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7623ad8723830dd9c48372e1d5fde9973ce7c28636267dfcf506bed382e84150"
 dependencies = [
- "amq-protocol-uri",
- "mio",
- "tcp-stream",
+ "amq-protocol-uri 3.1.0",
+ "mio 0.6.21",
+ "tcp-stream 0.8.0",
+]
+
+[[package]]
+name = "amq-protocol-tcp"
+version = "5.0.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "c4e9c70a98dac69e79f1b5fefbf1fc8defc6234aab222a9e31a8f8454b46c0bd"
+dependencies = [
+ "amq-protocol-uri 5.0.1",
+ "log",
+ "mio 0.7.0",
+ "tcp-stream 0.10.1",
 ]
 
 [[package]]
@@ -51,6 +89,18 @@ name = "amq-protocol-types"
 version = "3.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a13489ba9891aac7f217c80ef10ead9e0219422d9af826bceb13a84346f75d0f"
+dependencies = [
+ "cookie-factory",
+ "nom 5.1.0",
+ "serde",
+ "serde_json",
+]
+
+[[package]]
+name = "amq-protocol-types"
+version = "5.0.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "950c32108873a8b3907c45b271232269c4f750bcd0b6f8ea20745a5b4c78e1b2"
 dependencies = [
  "cookie-factory",
  "nom 5.1.0",
@@ -69,18 +119,28 @@ dependencies = [
 ]
 
 [[package]]
+name = "amq-protocol-uri"
+version = "5.0.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a51cf4107e9fd04cee40f92629a109131166bc3a5b4f60326113884ae54a41cf"
+dependencies = [
+ "percent-encoding",
+ "url",
+]
+
+[[package]]
 name = "amqp_worker"
 version = "0.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "fc7f6384d7d69a60be0db44d893a6f3c14384b1edd224812d76d5900f9bbbe5e"
 dependencies = [
- "amq-protocol-types",
- "amq-protocol-uri",
+ "amq-protocol-types 3.1.0",
+ "amq-protocol-uri 3.1.0",
  "chrono",
  "env_logger",
  "failure",
  "futures",
- "lapin-futures",
+ "lapin-futures 0.28.4",
  "log",
  "reqwest",
  "semver",
@@ -355,6 +415,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "doc-comment"
+version = "0.3.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "807e5847c39ad6a11eac66de492ed1406f76a260eb8656e8740cad9eabc69c27"
+
+[[package]]
 name = "dtoa"
 version = "0.4.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -567,6 +633,20 @@ dependencies = [
 ]
 
 [[package]]
+name = "handlebars"
+version = "3.0.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ba758d094d31274eb49d15da6f326b96bf3185239a6359bf684f3d5321148900"
+dependencies = [
+ "log",
+ "pest",
+ "pest_derive",
+ "quick-error",
+ "serde",
+ "serde_json",
+]
+
+[[package]]
 name = "hashbrown"
 version = "0.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -771,12 +851,28 @@ version = "0.28.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "61b3c8c3998855de92a004f57881773793f8f4bc65ff7eaaaed6a369082b17d3"
 dependencies = [
- "amq-protocol",
- "amq-protocol-codegen",
+ "amq-protocol 3.1.0",
+ "amq-protocol-codegen 3.1.0",
  "crossbeam-channel",
  "log",
- "mio",
+ "mio 0.6.21",
  "parking_lot 0.10.0",
+ "serde_json",
+]
+
+[[package]]
+name = "lapin"
+version = "0.33.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "03174d2fde9758b82b4580eb51f7f7ce6d34c4501780a06e36204bf13a772db4"
+dependencies = [
+ "amq-protocol 5.0.1",
+ "amq-protocol-codegen 5.0.1",
+ "crossbeam-channel",
+ "log",
+ "mio 0.7.0",
+ "parking_lot 0.10.0",
+ "pinky-swear",
  "serde_json",
 ]
 
@@ -787,8 +883,20 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "68b394ba17e07251555988f7a7fb8452e4e56833bdf2965d9b1e614bcf78a3db"
 dependencies = [
  "futures",
- "lapin",
+ "lapin 0.28.4",
  "log",
+]
+
+[[package]]
+name = "lapin-futures"
+version = "0.33.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "711aa60d38f9bc2618fa095a844c0e1a17bc58095cfcc780b933abd253d1ddaf"
+dependencies = [
+ "futures",
+ "lapin 0.33.0",
+ "log",
+ "pinky-swear",
 ]
 
 [[package]]
@@ -896,10 +1004,24 @@ dependencies = [
  "kernel32-sys",
  "libc",
  "log",
- "miow",
+ "miow 0.2.1",
  "net2",
  "slab",
  "winapi 0.2.8",
+]
+
+[[package]]
+name = "mio"
+version = "0.7.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "6e9971bc8349a361217a8f2a41f5d011274686bd4436465ba51730921039d7fb"
+dependencies = [
+ "lazy_static",
+ "libc",
+ "log",
+ "miow 0.3.3",
+ "ntapi",
+ "winapi 0.3.8",
 ]
 
 [[package]]
@@ -910,7 +1032,7 @@ checksum = "966257a94e196b11bb43aca423754d87429960a768de9414f3691d6957abf125"
 dependencies = [
  "iovec",
  "libc",
- "mio",
+ "mio 0.6.21",
 ]
 
 [[package]]
@@ -923,6 +1045,16 @@ dependencies = [
  "net2",
  "winapi 0.2.8",
  "ws2_32-sys",
+]
+
+[[package]]
+name = "miow"
+version = "0.3.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "396aa0f2003d7df8395cb93e09871561ccc3e785f0acb369170e8cc74ddf9226"
+dependencies = [
+ "socket2",
+ "winapi 0.3.8",
 ]
 
 [[package]]
@@ -979,6 +1111,15 @@ dependencies = [
  "lexical-core",
  "memchr",
  "version_check 0.1.5",
+]
+
+[[package]]
+name = "ntapi"
+version = "0.3.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f26e041cd983acbc087e30fcba770380cfa352d0e392e175b2344ebaf7ea0602"
+dependencies = [
+ "winapi 0.3.8",
 ]
 
 [[package]]
@@ -1203,6 +1344,16 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5894c618ce612a3fa23881b152b608bafb8c56cfc22f434a3ba3120b40f7b587"
 
 [[package]]
+name = "pinky-swear"
+version = "1.1.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f4cdbc3f8b8e6c8adbca01bfff1bef045e727c99fe1c2de0d42027dec4dad752"
+dependencies = [
+ "doc-comment",
+ "parking_lot 0.10.0",
+]
+
+[[package]]
 name = "pkg-config"
 version = "0.3.17"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1236,10 +1387,10 @@ dependencies = [
 
 [[package]]
 name = "py_amqp_worker"
-version = "0.2.0"
+version = "0.3.1"
 dependencies = [
  "amqp_worker",
- "lapin-futures",
+ "lapin-futures 0.33.0",
  "log",
  "pyo3",
  "semver",
@@ -1575,6 +1726,18 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5c2fb2ec9bcd216a5b0d0ccf31ab17b5ed1d627960edff65bbe95d3ce221cefc"
 
 [[package]]
+name = "socket2"
+version = "0.3.11"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e8b74de517221a2cb01a53349cf54182acdc31a074727d3079068448c0676d85"
+dependencies = [
+ "cfg-if",
+ "libc",
+ "redox_syscall",
+ "winapi 0.3.8",
+]
+
+[[package]]
 name = "sourcefile"
 version = "0.1.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1622,7 +1785,18 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "bd9341a6cbb07bc9bface9028e2e8902f12f3971755688816fd405bc8cd4d8d7"
 dependencies = [
  "cfg-if",
- "mio",
+ "mio 0.6.21",
+ "native-tls",
+]
+
+[[package]]
+name = "tcp-stream"
+version = "0.10.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ad39e5d880c4584bf47cb1b2619c02df5f0a1855585404b73be86b960736910f"
+dependencies = [
+ "cfg-if",
+ "mio 0.7.0",
  "native-tls",
 ]
 
@@ -1677,7 +1851,7 @@ checksum = "5a09c0b5bb588872ab2f09afa13ee6e9dac11e10a0ec9e8e3ba39a5a5d530af6"
 dependencies = [
  "bytes 0.4.12",
  "futures",
- "mio",
+ "mio 0.6.21",
  "num_cpus",
  "tokio-codec",
  "tokio-current-thread",
@@ -1704,7 +1878,7 @@ dependencies = [
  "iovec",
  "lazy_static",
  "memchr",
- "mio",
+ "mio 0.6.21",
  "num_cpus",
  "pin-project-lite",
  "slab",
@@ -1773,7 +1947,7 @@ dependencies = [
  "futures",
  "lazy_static",
  "log",
- "mio",
+ "mio 0.6.21",
  "num_cpus",
  "parking_lot 0.9.0",
  "slab",
@@ -1801,7 +1975,7 @@ dependencies = [
  "bytes 0.4.12",
  "futures",
  "iovec",
- "mio",
+ "mio 0.6.21",
  "tokio-io",
  "tokio-reactor",
 ]
@@ -1854,7 +2028,7 @@ dependencies = [
  "bytes 0.4.12",
  "futures",
  "log",
- "mio",
+ "mio 0.6.21",
  "tokio-codec",
  "tokio-io",
  "tokio-reactor",
@@ -1871,7 +2045,7 @@ dependencies = [
  "iovec",
  "libc",
  "log",
- "mio",
+ "mio 0.6.21",
  "mio-uds",
  "tokio-codec",
  "tokio-io",
