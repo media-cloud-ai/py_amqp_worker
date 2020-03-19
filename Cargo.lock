@@ -1236,7 +1236,7 @@ dependencies = [
 
 [[package]]
 name = "py_amqp_worker"
-version = "0.2.0"
+version = "0.3.1"
 dependencies = [
  "amqp_worker",
  "lapin-futures",
@@ -1248,30 +1248,29 @@ dependencies = [
 
 [[package]]
 name = "pyo3"
-version = "0.8.5"
+version = "0.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e1bfe257586436fbe1296d917f14a167d4253d0873bf43e2c9b9bdd58a3f9f35"
+checksum = "ce08a871f249e96da102a41b6c47ff25def6ef1c73f64631875c7f5dad65dc42"
 dependencies = [
  "indoc",
  "inventory",
- "lazy_static",
  "libc",
  "num-traits",
+ "parking_lot 0.10.0",
  "paste",
  "pyo3cls",
  "regex",
  "serde",
  "serde_json",
- "spin",
  "unindent",
  "version_check 0.9.1",
 ]
 
 [[package]]
 name = "pyo3-derive-backend"
-version = "0.8.5"
+version = "0.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4882d8237fd8c7373cc25cb802fe0dab9ff70830fd56f47ef6c7f3f287fcc057"
+checksum = "fd74cdc4b789b2e1f02b814bedf721f7bdb75304312515bcc595ca0210e34a1c"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -1280,11 +1279,10 @@ dependencies = [
 
 [[package]]
 name = "pyo3cls"
-version = "0.8.5"
+version = "0.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fdf321cfab555f7411298733c86d21e5136f5ded13f5872fabf9de3337beecda"
+checksum = "d22bc97c25af00f6b6ee4ff7a0cc1ea7476a375fb3556d19ca97a071099739f1"
 dependencies = [
- "proc-macro2",
  "pyo3-derive-backend",
  "quote",
  "syn",
@@ -1579,12 +1577,6 @@ name = "sourcefile"
 version = "0.1.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4bf77cb82ba8453b42b6ae1d692e4cdc92f9a47beaf89a847c8be83f4e328ad3"
-
-[[package]]
-name = "spin"
-version = "0.5.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6e63cff320ae2c57904679ba7cb63280a3dc4613885beafb148ee7bf9aa9042d"
 
 [[package]]
 name = "static_assertions"
